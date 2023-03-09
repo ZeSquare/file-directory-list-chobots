@@ -38,7 +38,7 @@ SOFTWARE.
 	$ignore_file_list = array( ".htaccess", "Thumbs.db", ".DS_Store", "index.php" );
 	
 	// ADD SPECIFIC FILE EXTENSIONS YOU WANT TO IGNORE HERE, EXAMPLE: array('psd','jpg','jpeg')
-	$ignore_ext_list = array( );
+	$ignore_ext_list = array( "fla", "xml" );
 	
 	// SORT BY
 	$sort_by = "name_asc"; // options: name_asc, name_desc, date_asc, date_desc
@@ -51,7 +51,7 @@ SOFTWARE.
 	$toggle_sub_folders = true;
 	
 	// FORCE DOWNLOAD ATTRIBUTE
-	$force_download = true;
+	$force_download = false;
 	
 	// IGNORE EMPTY FOLDERS
 	$ignore_empty_folders = true;
@@ -68,9 +68,11 @@ if( !$title ) { $title = clean_title(basename(dirname(__FILE__))); }
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://play.chobots.wiki/assets/stylesheets/style-index.css">
+    <link rel="icon" href="https://play.chobots.wiki/assets/imgB/favicon.ico" type="image/png">
 	<style>
 		*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-		body { background: #dadada; font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 400; font-size: 14px; line-height: 18px; padding: 0; margin: 0; text-align: center;}
+		body { font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 400; font-size: 14px; line-height: 18px; padding: 0; margin: 0; text-align: center;}
 		.wrap { max-width: 100%; width: 500px; margin: 20px auto; background: white; padding: 40px; border-radius: 3px; text-align: left;}
 		@media only screen and (max-width: 700px) { .wrap { padding: 15px; } }
 		h1 { text-align: center; margin: 40px 0; font-size: 22px; font-weight: bold; color: #666; }
@@ -121,7 +123,7 @@ if( !$title ) { $title = clean_title(basename(dirname(__FILE__))); }
 	</style>
 </head>
 <body class="<?php echo $color; ?>">
-<h1><?php echo $title ?></h1>
+<h1><img src="https://play.chobots.wiki/assets/images/logo.png" href="https://chobots.wiki/" width="13%"></h1>
 <div class="wrap">
 <?php
 
@@ -319,6 +321,6 @@ build_blocks( $items, false );
 </script>
 <?php } ?>
 </div>
-<div style="padding: 10px 10px 40px 10px;"><a href="https://halgatewood.com/free/file-directory-list/">Free PHP File Directory Script</a> (<a href="https://github.com/halgatewood/file-directory-list/">GitHub</a>)</div>
+<div style="padding: 10px 10px 40px 10px;"><a href="https://halgatewood.com/free/file-directory-list/">Free PHP File Directory Script</a> (<a href="https://github.com/ZeSquare/file-directory-list-chobots">GitHub</a>) Kavalok.net/Chobots.wiki</div>
 </body>
 </html>
